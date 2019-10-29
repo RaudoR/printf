@@ -11,6 +11,7 @@ int _printf(const char *format, ...)
 
 	va_list lst;
 	int alpha = 0, bravo = 0;
+	char percent = '%';
 
 	va_start(lst, format);
 	while (format[alpha] != '\0')
@@ -25,9 +26,7 @@ int _printf(const char *format, ...)
 			else if (format[alpha] == 'c')
 				bravo += print_char(lst);
 			else if (format += '%')
-				write(1, "%", 1);
-			else
-				write(1, &format[alpha - 1], 2);
+				write(1, &percent, 1);
 		}
 		else
 		{
