@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 
 	va_list lst;
 	int alpha = 0;
-	unsigned int bravo = 0;
+	int bravo = 0;
 
 	va_start(lst, format);
 	if (format == NULL)
@@ -22,8 +22,6 @@ int _printf(const char *format, ...)
 		if (format[alpha] == '%')
 		{
 			alpha++;
-			while (format[alpha] == ' ')
-				alpha++;
 			if (format[alpha] == 'c')
 				bravo += print_char(lst);
 			else if (format[alpha] == 's')
