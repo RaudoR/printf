@@ -24,7 +24,7 @@ int _printf(const char *format, ...)
 				bravo += print_string(lst);
 			else if (format[alpha] == 'c')
 				bravo += print_char(lst);
-			else if (format += '%')
+			else if (format[alpha] += '%')
 				write(1, "%", 1);
 		}
 		else
