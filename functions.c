@@ -33,5 +33,33 @@ int print_string(va_list lst)
 		ptr++;
 		counter++;
 	}
-	return (1);
+	return (counter);
+}
+
+/**
+ * print_int - a function that prits an integer
+ * @lst: location of what needs to be printed
+ * Return: length
+ */
+int print_int(va_list lst)
+{
+
+	int i = va_arg(lst, int);
+	int len = 0;
+	unsigned int j, k;
+
+	if (i < 0)
+	{
+		i = -i;
+		len++;
+	}
+
+	k = i;
+	j = k;
+
+	do {
+		j /= 10;
+		++len;
+	} while (j != 0);
+	return (len);
 }
