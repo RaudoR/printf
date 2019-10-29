@@ -10,5 +10,7 @@
 int _printf(const char *format, ...);
 int print_char(va_list lst);
 int print_string(va_list lst);
+int print_int(va_list lst);
+
 
 #endif
