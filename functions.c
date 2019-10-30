@@ -65,7 +65,7 @@ int print_int(va_list lst)
 	h = 1;
 	while (k > 1)
 	{
-		h = h *10;
+		h = h * 10;
 		k--;
 	}
 	while (h > 0)
