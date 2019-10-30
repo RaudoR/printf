@@ -15,10 +15,9 @@ int _printf(const char *format, ...)
 	int bravo = 0;
 
 	va_start(lst, format);
-	if (format == NULL)
+	if (format == NULL || (format[alpha] == '%' && format[alpha + 1] == '\0'))
 	{
 		return (-1);
-		va_end(lst);
 	}
 	while (format[alpha] != '\0')
 	{
