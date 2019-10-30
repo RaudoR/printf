@@ -20,8 +20,6 @@ int _printf(const char *format, ...)
 		return (-1);
 		va_end(lst);
 	}
-	if (format == '\0')
-		return (-1);
 	while (format[alpha] != '\0')
 	{
 		if (format[alpha] == '%')
