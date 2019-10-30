@@ -44,22 +44,35 @@ int print_string(va_list lst)
 int print_int(va_list lst)
 {
 
-	int i = va_arg(lst, int);
+	int a = va_arg(lst, int);
+	int h = 1;
+	int j, k;
 	int len = 0;
-	unsigned int j, k;
 
-	if (i < 0)
+	if (a < 0)
 	{
-		i = -i;
+		write(1, "-", 1);
+		a = -a;
 		len++;
 	}
-
-	k = i;
-	j = k;
-
-	do {
-		j /= 10;
-		++len;
-	} while (j != 0);
+	j = a;
+	k = 0;
+	while (j > 0)
+	{
+		j = j / 10;
+		k++;
+	}
+	h = 1;
+	while (k > 1)
+	{
+		h = h *10;
+		k--;
+	}
+	while (h > 0)
+	{
+		_putchar(a / h % 10 + '0');
+		len++;
+		h = h / 10;
+	}
 	return (len);
 }
