@@ -11,8 +11,7 @@ int _printf(const char *format, ...)
 {
 
 	va_list lst;
-	int alpha = 0;
-	int bravo = 0;
+	int alpha = 0, bravo = 0;
 
 	va_start(lst, format);
 	if (format == NULL || (format[alpha] == '%' && format[alpha + 1] == '\0'))
