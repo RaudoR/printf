@@ -29,7 +29,10 @@ int _printf(const char *format, ...)
 			else if (format[alpha] == 'd' || format[alpha] == 'i')
 				bravo += print_int(lst);
 			else if (format[alpha] == '%')
+			{
 				write(1, "%", 1);
+				bravo++;
+			}
 			else
 				write(1, &format[alpha - 1], 2);
 		}
