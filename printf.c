@@ -17,6 +17,7 @@ int _printf(const char *format, ...)
 	va_start(lst, format);
 	if (format == NULL || (format[alpha] == '%' && format[alpha + 1] == '\0'))
 	{
+		va_end(lst);
 		return (-1);
 	}
 	if (format[alpha] == '\0')
